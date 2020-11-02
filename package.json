@@ -1,0 +1,67 @@
+{
+	"name": "i18n-hint",
+	"displayName": "i18n-hint",
+	"description": "",
+	"version": "0.0.4",
+	"author": {
+		"name": "zhangyang"
+	},
+	"engines": {
+		"vscode": "^1.40.0"
+	},
+	"publisher": "zhangyang",
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"configuration": [
+			{
+				"title": "base-i18n",
+				"properties": {
+					"i18n.list": {
+						"type":"array",
+						"default":["test", "test-a","test-b"],
+						"scope": "application",
+						"description": "List for Select"
+					},
+					"i18n.keyword": {
+						"type":"string",
+						"default":"L",
+						"scope": "application",
+						"description": "Trigger list display"
+					},
+					"i18n.filePathKeyword": {
+						"type":"string",
+						"default":"LANG",
+						"scope": "application",
+						"description": "Trigger File list display"
+					},
+					"i18n.filePath": {
+						"type": "string",
+						"default": ".",
+						"scope": "application",
+						"description": "i18n Mappting File Path"
+					}
+				}
+			}
+		]
+	},
+	"scripts": {
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.40.0",
+		"eslint": "^6.6.0",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"typescript": "^3.6.4",
+		"vscode-test": "^1.2.2"
+	}
+}
